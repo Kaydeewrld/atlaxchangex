@@ -1,0 +1,869 @@
+<!-- Project Name: Atlaxchange
+	Author: Kayode Ademola Festus
+	Author URL: linkedin.com/kaydeewrld
+	Support: N/A
+	Version: 1.1
+    Programming Language Used: HTML 5, CSS3, BOOTSTRAP 5.2, JAVASCRIPT, PHP AND JSON
+    DATE: 12/04/2024 - 08/06/2024  -->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlaxchange -Home</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="svgviewer-output (3).svg" type="image/x-icon">
+    <!-- faremwork of css -->
+    <link rel="stylesheet" href="assets/css/bootstrap-lib/bootstrap.min.css">
+    <!-- style sheet of css        -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive sheet of css -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- fonts awsome icon link            -->
+    <link rel="stylesheet" href="assets/font-awesome-lib/icon/font-awesome.min.css">
+    <!-- slick-slider link css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animation of css -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <div class="first_nav_hero_about">
+            <!-- ======== 1.1. header section ======== -->
+            <header>
+                <nav class="container navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <!-- site logo -->
+                        <a class="nav-logo p-0" href="index.html"><img src="svgviewer-output (3).svg" alt="logo" style="height: 60px; width: 60px;"></a>
+                                <!-- navigation button  -->
+                        <button class="navbar-toggle" onclick="openNav()" type="button"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <!-- navigation bar manu  -->
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul
+                                class="navbar-nav d-flex justify-content-center align-items-center gap-lg-2 gap-md-2 gap-sm-2 gap-2 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="feature.html">Products</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link " href="pricing.html">Take Loan <i
+                                            class="fa-sharp  fa-solid "></i></a>
+                                    <!-- <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="pricing.html">Take Loan</a></li>
+                                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                        <li><a class="dropdown-item" href="team.html">Team</a></li>
+                                        <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                                        <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                        <li><a class="dropdown-item" href="404.html">404</a></li>
+                                        <li><a class="dropdown-item" href="coming.html">Coming Soon</a></li>
+                                    </ul> -->
+                                </li>
+                                <li class="nav-item">
+                                    <a id="search-bar-bt" class="nav-link" href=""><i
+                                            class="fa-solid "></i></a>
+                                </li>
+                                <li class="nav-item header_btn ">
+                                    <a class="nav-link nav-hrf btn-hover1" href="signin.html">Sign In</a>
+                                </li>
+                                <li class="nav-item" onclick="open_right_side()">
+                                    <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--============ navigation left slidebar================-->
+                <aside>
+                    <div id="mySidenav" class="sidenav">
+                        <div class="side-nav-logo d-flex justify-content-between align-items-center ps-4 pe-3">
+                            <figure class="navbar-brand"><a href="index.html"><img src="svgviewer-output (3).svg" alt="img"
+                                class="nav-logo" style="height: 60px; width: 60px;"></a></figure>
+                            <div class="closebtn" onclick="closeNav()"><i
+                                    class="fa-solid fa-square-xmark side-bar-close-btn"></i></div>
+                        </div>
+                        <ul>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="feature.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Take Loan</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex align-items-center justify-content-between pt-3" id="slid-btn">
+                                    <a href="signin.html"><button class="a-slid">Sign In</button></a>
+                                    <i class="fa-solid fa-caret-down pe-4"></i>
+                                </div>
+                                 <ul id="slid-drop" class="myst">
+                                    <!-- <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="team.html">Team</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                    <li><a href="blogs.html">Blogs</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="coming.html">Coming Soon</a></li> -->
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                </aside>
+                <!--================== navigation drop search bar================-->
+                <div class="search" id="search-bar">
+                    <form class="d-flex nav-search">
+                        <input type="text" name="search" placeholder="Enter your text">
+                        <button class="btn-hover1" type="submit">Search</button>
+                    </form>
+                    <button id="remove-btn">
+                        <i class="fa-solid fa-square-xmark "></i>
+                    </button>
+                </div>
+                <!--=================navigation Right slidebar==================-->
+                <section class="right-sidbar" id="right_side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- site logo -->
+                        <a class="p-0 " href="index.html"><img src="svgviewer-output (3).svg" alt="logo" style="width: 60px; height: 60px;"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p class="mt-4 pb-3">Atlaxchange is a leading cryptocurrency exchange platform that offers a wide range of services to cater to the diverse needs of cryptocurrency users worldwide.
+                    </p>
+                    <a href="about.html" class="btn-hover1">Discover More</a>
+                    <hr>
+                    <h5 class="mt-4 mb-4">Connected details:</h5>
+                    <ul class="d-flex flex-column gap-3">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="#">kademola@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#">+123-456-7890</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-clock"></i></a>
+                            <a href="#">Office Hours: 8AM - 11PM Sunday -
+                                Weekend Day</a>
+                        </li>
+                    </ul>
+                    <span class="d-flex gap-4 mt-4">
+                        <a href="#" class="p-0"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="p-0"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="p-0"><i class="fa-brands fa-twitter"></i></a>
+                    </span>
+                </section>
+            </header>
+            <!-- ======== End of 1.1. header section ========  -->
+            <!-- ======== 1.2. hero section ======== -->
+            <section class="hero">
+                <div class="container">
+                    <div class="row text-md-start text-sm-center text-center gap-md-0 gap-sm-4 gap-5" >
+                        <div  data-aos="fade-up" class="col-md-6 d-flex align-items-md-start align-items-ms-center align-items-center justify-content-center flex-column" >
+                            <h2>Buy, Sell, <span style="color: white; background: linear-gradient(-40deg, #fff 0%, #C0D4C9 100%);   -webkit-background-clip: text; -webkit-text-fill-color: transparent;">and </span> Secure <span style="color: white; background: linear-gradient(-40deg, #fff 0%, #C0D4C9 100%);   -webkit-background-clip: text; -webkit-text-fill-color: transparent;">cash loan with your </span> crypto assets.</h2>
+                            <p>Simplify your access to the digital asset market. Buy & Sell crypto easily on Atlaxchange.</p>
+                            <a class="btn-hover1" href="signin.html">Get Started</a>
+                        </div>
+                        <div data-aos="fade-down" class="col-md-6 position-relative d-flex flex-column justify-content-center align-items-center mt-md-0 mt-sm-5 mt-4">
+                            <img src="svgviewer-output (38).svg" alt="hero_img1" class="moving" style="height: 650px; width: 685px;">
+                            <img src="assets/images/index/hero_watch.png" alt="hero_img2">
+                            <img src="assets/images/icon/hero_star.png" alt="hero_icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ======== End of 1.2. hero section ========  -->
+            <!-- ======== 1.3. about section ========  -->
+            <section class="about">
+                <div class="container">
+                    <div class="row text-md-start text-sm-center text-center">
+                        <div class="col-md-6 d-flex justify-content-between">
+                            <div class="ab_card1"  data-aos="flip-left">
+                                <h3>About</h3>
+                                <p class="p-f-s">Welcome to Atlaxchange, where innovation meets reliability in the realm of cryptocurrency services. Founded with a vision to revolutionize the way people engage with digital assets, Atlaxchange brings together a team of passionate experts dedicated to providing seamless crypto trading solutions and pioneering the concept of crypto-backed loans.</p>
+                                <div
+                                    class="d-flex align-items-center justify-content-lg-start justify-content-md-center justify-content-center">
+                                    <a class="btn-hover1" href="about.html">Learn More</a>
+                                    <div class="abut-video">
+                                        <a class="video-play-button" href="https://youtu.be/MclM7frOZLQ?si=lBXyf1O3AsJaqtj2" target="_blank">
+                                        <span class="fa-solid fa-play"></span>
+                                        </a>
+            
+                                    </div>
+                                    <div class="p-f-s w-v">Watch Video</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-sm-3 mt-3">
+                            <div class="ab_card2 d-flex flex-column justify-content-between" data-aos="flip-right">
+                                <div>
+                                    <div class="row gap-md-0 gap-sm-3 gap-3">
+                                        <div class="col-md-5 col-sm-12 col-12 ">
+                                            <div
+                                                class="d-flex justify-content-md-start justify-content-sm-center justify-content-center">
+                                                <h3 class="count">38</h3>
+                                                <h3>M+</h3>
+                                            </div>
+                                            <p class="p-f-s">Business have already joined us! Business have already
+                                                joined us!</p>
+                                        </div>
+                                        <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-12 p-0">
+                                            <h3>0%</h3>
+                                            <p class="p-f-s">Zero percent fee to any transaction Zero percent fee to any
+                                                transaction
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex mb-3 mt-4 gap-4 justify-content-md-start justify-content-ms-center justify-content-center">
+                                    <div class="position-relative">
+                                        <img src="Primary-Image-how-to-buy-and-sell-bitcoin-options-7378233-bd2a484188b6473eb92cdc890bfd5673.jpg" alt="about_img1">
+                                        <img src="Crypto-exchanges-and-apps.webp" alt="about_img2">
+                                    </div>
+                                    <div class="ps-2">
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p>So many people like this service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- ======== End of 1.4. finance section ========  -->
+        <!-- ======== 1.5. ispsum section ========  -->
+        <div class="ispsum-logo">
+            <div class="container">
+                <hr>
+                <div class="logo_ispsum_slider">
+                    <a href="#">
+                        <figure><img src="Visa_Inc._logo.svg.webp" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="Meta_Platforms_Inc._logo.svg" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="2560px-Bank_of_America_logo.svg.png" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="1200px-Samsung_logo_blue.png" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="Paystack_Logo.png" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="Oracle_logo.svg.png" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="Microsoft_logo_(2012).svg.png" alt="img"></figure>
+                    </a>
+                    <a href="#">
+                        <figure><img src="Amazon_logo.svg" alt="img"></figure>
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- ======== End of 1.5. ispsum section ========  -->
+        <!-- ======== 1.6. gateway section ========  -->
+        <section class="gateway">
+            <div class="container">
+                <div class="row gap-lg-0 gap-md-0 gap-sm-4 gap-4">
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center" data-aos="fade-up">
+                        <div class=" gateway-bg-img mt-5 ">
+                            <figure><img src="thecryptoapp_main.png" alt="gate_img1" class="moving" style=" margin-top: 0;"></figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6  text-md-start text-sm-center text-center" data-aos="fade-down">
+                        <h2>SIMPLIFY YOUR PAYMENT PROCESSES</h2>
+                        <P class="pt-lg-4 pt-md-3 pt-sm-2 pt-2">Experience effortless transactions, seamless conversions, and instant settlements—all at your fingertips. Say goodbye to complexity and hello to convenience.</P>
+                        <div
+                            class="gate mt-md-3 mt-sm-0 mt-4   d-flex flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon1.png"
+                                    alt="gate-img1"></figure>
+                            <div class="account-text ms-3">
+                                <h5 class="pb-2">Create Account</h5>
+                                <p class="p-f-s">Creating an account with us is your gateway to seamless crypto transactions and a world of financial possibilities.</p>
+                            </div>
+                        </div>
+                        <div class="gate d-flex mt-4  flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon2.png"
+                                    alt="gate-img2"></figure>
+                            <div class="ms-3">
+                                <h5 class="pb-2">User Configuration</h5>
+                                <p class="p-f-s">After creating your account with atlaxchange, it's time to tailor your experience to suit your preferences and needs.</p>
+                            </div>
+                        </div>
+                        <div class="gate d-flex mt-4  flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon3.png"
+                                    alt="gate-img3"></figure>
+                            <div class="ms-3">
+                                <h5 class="pb-2">Enjoy Full Access</h5>
+                                <p class="p-f-s">Now that your account with Atlaxchange is set up and configured, it's time to dive into the exciting world of cryptocurrency with full access to our platform's features and functionalities.</p>
+                            </div>
+                        </div>
+                        <div class="gate-link text-lg-start text-md-start text-sm-center text-center">
+                            <a class="btn-hover1" href="signin.html">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.6. gateway section ========  -->
+        <!-- ======== 1.7. services section ========  -->
+        <section class="services">
+            <div class="container">
+                <div class="row gap-md-0 gap-sm-4 gap-4">
+                    <div class="col-lg-6 col-md-6" data-aos="fade-down" style="margin-left: -5px;">
+                        <h2 class="text-lg-start text-md-start text-sm-center text-center">EXCEPTIONAL SERVICES AND
+                            SOLUTIONS</h2>
+                        <p
+                            class="text-lg-start text-md-start text-sm-center text-center mt-lg-4 mt-md-2 mt-sm-2 mt-2 pb-4 ">
+                            At Atlaxchange, we are committed to providing our users with exceptional services and innovative solutions that set us apart in the competitive landscape of cryptocurrency platforms</p>
+                        <div class=" d-flex  justify-content-center gap-lg-4 gap-md-3 gap-sm-2 gap-2">
+                            <div class="offers">
+                                <h5 class="mb-2">Any Time Transaction</h5>
+                                <p class="p-f-s">At Atlaxchange, we believe in providing our users with unparalleled value and transparency.</p>
+                            </div>
+                            <div class="offers">
+                                <h5 class=" mb-2">Zero Hidden Cost</h5>
+                                <p class="p-f-s">Hidden costs can erode trust and leave users feeling disillusioned. That's why we guarantee zero hidden costs on all transactions.</p>
+                            </div>
+                        </div>
+                        <div class="serives-btn justify-content-md-start justify-content-ms-center justify-content-center d-flex">
+                            <a class="btn-hover1" href="about.html">Learn More</a>
+                            <div class="d-flex align-items-center">
+                                <a class="ps-4" href="signup.html">Register Now </a>
+                                <i class="fa-solid fa-greater-than ps-md-3 ps-sm-1 ps-0"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center sevices_img spaat" data-aos="fade-up"> 
+                        <div class="position-relative">
+                            <div class="social-rating" style="margin-left: 25px;" >
+                                <div class="d-flex">
+                                    <div class="d-flex">
+                                        <span><i class="fa-brands fa-youtube"></i></span>
+                                        <div>
+                                            <h6>Youtube Stock</h6>
+                                            <p>9 June 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex text-pink">
+                                        <p>-$</p>
+                                        <p class="count">3.00</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex">
+                                        <span><i class="fa-brands fa-facebook"></i></span>
+                                        <div>
+                                            <h6>Facebook Stock</h6>
+                                            <p>5 June 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex text-green">
+                                        <p>+$</p>
+                                        <p class="count">21.00</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex">
+                                        <span><i class="fa-brands fa-pinterest-p"></i></span>
+                                        <div>
+                                            <h6>Pinterest Stock</h6>
+                                            <p>2 June 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex text-pink">
+                                        <p>-$</p>
+                                        <p class="count">14.00</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flex">
+                                        <span><i class="fa-brands fa-twitter"></i></span>
+                                        <div>
+                                            <h6>Twitter Stock</h6>
+                                            <p>1 June 2024</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex text-green">
+                                        <p>+$</p>
+                                        <p class="count">51.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <figure><img src="file.png" alt="sevice_img2"></figure>
+                            <figure><img src="assets/images/icon/whitStar.png" alt="sevice_img3"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.7. services section ========  -->
+        <!-- ======== 1.8. visa section ========  -->
+        <section class="visa">
+            <div class="container">
+                <div class="visa-bg" data-aos="zoom-in">
+                    <figure><img src="6045300.jpg" alt="visa-img" style="width: 1100px; height: 432px; border-radius: 25px;"></figure>
+                </div>
+                <div class="visa-contant" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <h3 class="text-md-start text-sm-center text-center">Replacing complexity with
+                                simplicity
+                            </h3>
+                            <p class="text-md-start text-sm-center text-center p-f-s">Navigating the world of cryptocurrency can be daunting, but with us, it's effortless. Our user-friendly interface guides you through each step, from account creation to executing transactions, ensuring a smooth experience from start to finish.</p>
+                            <p class="text-md-start text-sm-center text-center p-f-s">We believe in clear communication. That's why we provide transparent explanations of terms, fees, and processes, empowering you to make informed decisions with confidence.</p>
+                            <div class="visa-btn text-sm-center text-md-start text-center">
+                                <a class="btn-hover1" href="signin.html">Try Atlaxchange Now</a>
+                            </div>
+
+
+                           
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="visa-logo d-flex justify-content-between align-items-center pt-2 pb-3">
+                                <figure><img src="Microsoft_logo_(2012).svg.png" alt="vica-icon1"> </figure>
+                                <figure><img src="Oracle_logo.svg.png" alt="vica-icon2"></figure>
+                                <figure><img src="Meta_Platforms_Inc._logo.svg" alt="vica-icon3"></figure>
+                                <figure><img src="Visa_Inc._logo.svg.webp" alt="vica-icon4"></figure>
+                                <figure><img src="Amazon_logo.svg" alt="vica-icon5"></figure>
+                            </div>
+                            <div class="d-flex pt-2 justify-content-md-start justify-content-center justify-content-center">
+                                <h2 class="count">280</h2>
+                                <h2>+</h2>
+                                <h6 class="d-flex align-items-center ps-2 ">Integrations</h6>
+                            </div>
+                            <p class="pt-2 pb-3 text-md-start text-sm-center text-center p-f-s">We're excited to offer seamless integration with some of the industry's leading payment providers, including PayPal, Paystack, Flutterwave, and Wakanow.</p>
+                            <div class="visa-card position-relative mt-3">
+                                <img src="1_mhiqJIyiC9xJ0yUEj2r-Ug.png" style="border-radius: 25px; height: 300px; width: 500px;" alt="visa-card">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.8. visa section ========  -->
+        <!-- ========  1.9. pricing section ========  -->
+        <section class="pricing pricing-b-g">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center pricing-bg" data-aos="fade-up">
+                        <div>
+                            <figure><img src="svgviewer-output (39).svg" alt="pric-img1" class="moving"></figure>
+                            <figure><img src="assets/images/icon/hero_star.png" alt="pric-img2"></figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mt-md-0 mt-sm-5 mt-5" data-aos="fade-down">
+                        <h2 class=" text-md-start text-sm-center text-center">ECONOMICAL PRICING OPTIONS</h2>
+                        <p class="text-md-start text-sm-center text-center p-md-0 p-sm-2 p-2">Our personal and business loan plans come with features that cater to different needs, ensuring you get the best value.</p>
+                        <div class="pric-list">
+                            <h6>Personal Loans</h6>
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between gap-md-5 gap-sm-3 gap-3">
+                                    <div class="d-flex pric-sup align-items-center">
+                                        <h2>$1.54</h2>
+                                        <p>Interest/month</p>
+                                    </div>
+                                    <p class="p-f-s">Ideal for individuals looking to start their journey in the crypto world with minimal investment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pric-list second">
+                            <h6>Business Loan</h6>
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex justify-content-between gap-md-4 gap-sm-2 gap-2">
+                                    <div class="d-flex pric-sup ">
+                                        <h2>$4.54</h2>
+                                        <p>Interest/month</p>
+                                    </div>
+                                    <p class="p-f-s">Perfect for businesses that need more advanced tools, money and support to manage their crypto transactions efficiently. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-md-start text-sm-center text-center pt-lg-4 pt-md-2 pt-sm-0 pt-1">
+                            <a class="btn-hover1" href="contact.html">Get Your Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.9. pricing section ========  -->
+        <!-- ======== 1.10. profaessional section ========  -->
+        <section class="profaessional mt-lg-5 mt-md-3 mt-sm-3 mt-3">
+            <div class="container">
+                <h2 class="text-center">Trusted By Professionals</h2>
+                <P class="text-center pt-3 pb-5 mb-2">Our commitment to excellence, transparency, and innovation has earned us the confidence of industry experts, financial institutions, and individual investors alike. </P>
+                <div class="prof-size" data-aos="zoom-in-up">
+                    <div class="prof-slider ">
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div class="d-flex  align-items-center justify-content-center">
+                                    <img src="IMG_0340.jpg" alt="img" class="prof-img-2">
+                                </div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">The seamless integration and multiple payment options at Atlaxchange have significantly enhanced our business operations. We trust their platform for its reliability and comprehensive support.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Ahmed Kunle</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">Entrepreneur</p>
+                            </div>
+                        </div>
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div class="d-flex  align-items-center justify-content-center">
+                                    <img src="1690889768971.jpeg" alt="img" class="prof-img-2">
+                                </div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">Atlaxchange's robust security measures and customizable checkout solutions have made our transactions smooth and secure. We appreciate their dedication to client satisfaction and innovation.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Lekan Ewenla</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">MD/CEO</p>
+                            </div>
+                        </div>
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div class="d-flex  align-items-center justify-content-center">
+                                    <img src="1691655102135.jpeg" alt="img" class="prof-img-2">
+                                </div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">Atlaxchange provides exceptional service and robust security, making it my go-to platform for all crypto transactions. Their customer support is top-notch, and the user experience is unparalleled.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Wonu Aworinde</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">Forex Trader</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.10. profaessional section ========  -->
+        <!-- ======== 1.11. question section ========  -->
+        <section class="question">
+            <div class="container">
+                <div class="row">
+                    <div class="question-text col-lg-6 col-md-6 tab-center" data-aos="fade-up">
+                        <h2 class="text-lg-start text-md-start text-sm-center text-center">FREQUENTLY ASKED
+                            QUESTIONS
+                        </h2>
+                        <P class="text-lg-start text-md-start text-sm-center text-center mt-md-3 mt-3">Have questions? We have answers! Find solutions to common queries about our services, features, and more. If you need further assistance, don't hesitate to reach out to our support team.</P>
+                        <div class="text-lg-start text-md-start text-sm-center text-center ">
+                            <a class="btn-hover1" href="faq.html">More FAQs</a>
+                        </div>
+                    </div>
+                    <div class="question-collapes col-lg-6 col-md-6 mt-md-0 mt-sm-3 mt-3" data-aos="zoom-in">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Is cryptocurrency trading safe?
+                                    </button>
+                                </h5>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> While cryptocurrency trading carries certain risks, our platform implements robust security measures to safeguard users' funds and personal information. It's important to do your own research and exercise caution when trading cryptocurrencies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                         What types of businesses are eligible for this service?
+                                    </button>
+                                </h5>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> Our service is designed to cater to a wide range of businesses, spanning various industries and sectors. Whether you're a small startup, a mid-sized company, or a large enterprise, you can benefit from our services. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How long does it take to receive funds?
+                                    </button>
+                                </h5>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p> Our platform is designed to facilitate quick and efficient transactions, allowing you to access your funds without delay. Whether you're receiving funds through cryptocurrency transactions, bank transfers, or e-wallets, you can trust Atlaxchange to deliver your funds promptly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                         How can I contact with support?
+                                    </button>
+                                </h5>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>For assistance with your account or any other inquiries, you can reach out to our customer support team through the contact form on our website, email, or live chat support available during business hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.11. question section ========  -->
+        <!-- ======== 1.12. news-cards section ========  -->
+        <section class="news-cards">
+            <div class="container">
+                <h2 class="text-center">OUR LATEST NEWS & EVENTS</h2>
+                <P class="text-center news-p">Stay updated with the latest developments and events in the world of cryptocurrency. Discover insights, news, and expert opinions that keep you informed and ahead of the curve.</P>
+                <div class="row d-flex gap-md-0 gap-sm-5 gap-4">
+                    <div class="col-lg-4 col-md-4 d-flex" data-aos="flip-right">
+                        <div class="card news-card-back">
+                            <img src="7-Steps-V2.jpg" alt="card-img" style="height: 330px;">
+                            <div class="card-body">
+                                <a href="https://www.linkedin.com/pulse/5-factors-consider-when-choosing-right-payment-gateway-your/" target="_blank">
+                                    <h5>Choosing a Payment Gateway: Key Factors to Consider</h5>
+                                </a>
+                                <p class="card-text p-f-s">Choosing the right payment gateway is crucial for seamless transactions. Learn about the essential factors to consider to make an informed decision.</p>
+                            </div>
+                            <hr class="dotted-line">
+                            <div class="card-viewer d-flex justify-content-between ">
+                                <div>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>2023/06/12</span>
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-message"></i>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="news-link">
+                                <a class="btn-hover1" href="https://www.linkedin.com/pulse/5-factors-consider-when-choosing-right-payment-gateway-your/" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex"  data-aos="flip-right">
+                        <div class="card news-card-back">
+                            <img src="1_DMAsRo6v9saiMXyPMMGetA.jpg" alt="image" style="height: 330px;">
+                            <div class="card-body">
+                                <a href="https://rockcontent.com/blog/strategies-to-grow-your-online-business/" target="_blank">
+                                    <h5>Top Strategies to do Successful Online Business</h5>
+                                </a>
+                                <p class="card-text p-f-s">Discover effective strategies to boost your online business. Learn about essential practices that can help you achieve sustained success in the digital marketplace.</p>
+                            </div>
+                            <hr class="dotted-line">
+                            <div class="card-viewer d-flex justify-content-between ">
+                                <div>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>2023/06/12</span>
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-message"></i>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="card-color">
+                                <a class="btn-hover1" href="https://rockcontent.com/blog/strategies-to-grow-your-online-business/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex" data-aos="flip-right">
+                        <div class="card news-card-back">
+                            <img src="Funding-for-MFIs-copy.png" alt="image" style="height: 330px;">
+                            <div class="card-body">
+                                <a href="https://www.linkedin.com/pulse/why-micro-financing-important-small-businesses-#:~:text=Microfinancing%20helps%20to%20place%20small,funds%20to%20grow%20their%20businesses." target="_blank">
+                                    <h5>The Benefits of Microfinancing for Small Business</h5>
+                                </a>
+                                <p class="card-text p-f-s">Explore how microfinancing can empower small businesses by providing essential funds. Understand the advantages and impact of microfinancing on business growth.</p>
+                            </div>
+                            <hr class="dotted-line">
+                            <div class="card-viewer d-flex justify-content-between ">
+                                <div>
+
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>2023/06/12</span>
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-message"></i>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="btn-hover1" href="https://www.linkedin.com/pulse/why-micro-financing-important-small-businesses-#:~:text=Microfinancing%20helps%20to%20place%20small,funds%20to%20grow%20their%20businesses." target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.12. news-cards section ========  -->
+        <!-- ======== 1.13. footer section ========  -->
+        <footer class="position-relative">
+            <div class="container">
+                <h4 class="text-center">SUBSCRIBE OUR NEWSLETTER</h4>
+                <P class="text-center pt-2 pb-3">Get latest News and Updates</P>
+                <form class="d-flex align-items-center justify-content-center" id="footer-sub2">
+                    <!-- form Subscribe massage -->
+                    <div id="Succes-box2"></div>
+                    <div class="d-flex footer-search ">
+                        <input type="email" name="search" placeholder="Enter your Email" required>
+                        <button type="submit" class="btn-hover1">Subscribe</button>
+                    </div>
+                </form>
+                <div class="footer-logo text-center pb-lg-4 pb-md-3 pb-sm-2 pb-4">
+                    <!-- footer logo  -->
+                    <a href="index.html">
+                        <figure><img src="svgviewer-output (3).svg" alt="img" style="height: 70px; width: 70px;"></figure>
+                    </a>
+                </div>
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li>
+                        <a href="feature.html">Feature</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">Faq</a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="row footer-nav-icon">
+                    <!-- footer social icon  -->
+                    <div class="col-lg-3 col-md-3 d-flex align-items-center justify-content-md-start justify-content-sm-center justify-content-center">
+                        <div
+                            class="social-icon d-flex gap-2 justify-content-md-start justify-content-sm-center justify-content-center">
+                            <a href="#"> <i class="fa-brands fa-facebook-f foot-facebook"></i></a>
+                            <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!-- footer terms privacy  -->
+                    <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
+                        <div class=" d-flex gap-3 p-2">
+                            <a href="#">Terms & Condition</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <!-- footer logo slider  -->
+                    <div class="col-lg-3 col-md-3">
+                        <div class="footer_ispsum_slider">
+                            <figure><a href="#"><img src="Microsoft_logo_(2012).svg.png" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                            <figure><a href="#"><img src="Meta_Platforms_Inc._logo.svg" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                            <figure><a href="#"><img src="Oracle_logo.svg.png" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                            <figure><a href="#"><img src="Visa_Inc._logo.svg.webp" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                            <figure><a href="#"><img src="Paystack_Logo.png" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                            <figure><a href="#"><img src="Amazon_logo.svg" alt="qr-code" style="height: 30px; width: 70px;"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="Copyright d-flex justify-content-between flex-wrap dir">
+                        <p>Copyright © 2024 Atlaxchange by Kaydeewrld. All Right Reserved.</p>
+                        <p>Powered by Kaydee</p>
+                    </div>
+                </div>
+        </footer>
+        <!-- ======== End of 1.13. footer section ========  -->
+    </div>
+    <!-- end site wrapper -->
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+    <!-- bootstrap min javascript -->
+    <script src="assets/js/javascript-lib/bootstrap.min.js"></script>
+    <!-- j Query -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- slick slider js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- main javascript -->
+    <script src="assets/js/custom.js"></script>
+    <!-- counter javascript file -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- animation from javascript -->
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1500,
+        });
+      </script>
+</body>
+
+</html>
